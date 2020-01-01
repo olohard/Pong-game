@@ -46,14 +46,6 @@ def score_a_point(ball):
     screen.blit(enemy_points, (820, 10))
 
 
-def add_a_new_ball(ball):
-    if ball.ballX < 100 or ball.ballX > 1280:
-        ball.delBall()
-        b = Ball(screen, int(screenWidth/2), int(screenHeight/2))
-        b.drawBall()
-        b.moveBall()
-
-
 # Button on which is testing any action
 def testing_button(color, active_color, x, y, width, height, action=None):
     mouseX, mouseY = pygame.mouse.get_pos()
