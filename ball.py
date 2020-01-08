@@ -1,5 +1,4 @@
 import pygame
-import random
 
 
 class Ball(object):
@@ -15,17 +14,8 @@ class Ball(object):
     def drawBall(self):
         pygame.draw.circle(self.screen, (255, 255, 255), (int(self.ballX), int(self.ballY)), self.ballRadius)
 
-    def delBall(self):
-        del self
-        return False
-
     # Moving the ball
-    def moveBall(self):
-        self.ballX -= self.ballSpeedX
-        self.ballY -= self.ballSpeedY
-        '''
-        a = random.randint(1,4)
-        print(a)
+    def moveBall(self, a):
         if a == 1:
             self.ballX -= self.ballSpeedX
             self.ballY -= self.ballSpeedY
@@ -38,7 +28,6 @@ class Ball(object):
         if a == 4:
             self.ballX += self.ballSpeedX
             self.ballY += self.ballSpeedY
-            '''
         
         if self.ballY >= 720:
             self.ballSpeedY *= -1
