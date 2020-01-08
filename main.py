@@ -3,6 +3,7 @@ from player import Player
 from enemy import Enemy
 from ai_enemy import AI_enemy
 from ball import Ball
+import random
 
 # Game initialization
 pygame.init()
@@ -110,6 +111,8 @@ class Player2Game:
         enemy = Enemy(screen)
         ball = Ball(screen, int(screenWidth / 2), int(screenHeight / 2))
 
+        self.a = random.randint(1, 4)
+            
         # Main loop
         while True:
             for event in pygame.event.get():
@@ -157,12 +160,11 @@ class Player2Game:
         enemy.drawEnemy()
         ball.drawBall()
 
-    # Moving the created objects
-    @staticmethod
-    def move(player, enemy, ball):
+    # Moving the created object
+    def move(self, player, enemy, ball):
         player.movePlayer()
         enemy.moveEnemy()
-        ball.moveBall()
+        ball.moveBall(self.a)
 
     # Players collision
     @staticmethod
@@ -189,6 +191,8 @@ class Player1Game:
         ai_enemy = AI_enemy(screen)
         ball = Ball(screen, int(screenWidth / 2), int(screenHeight / 2))
 
+        self.a = random.randint(1, 4)
+        
         # Main loop
         while True:
             for event in pygame.event.get():
@@ -236,12 +240,11 @@ class Player1Game:
         ai_enemy.drawAI_enemy()
         ball.drawBall()
 
-    # Moveing objects
-    @staticmethod
-    def move(player, ai_enemy, ball):
+    # Moving objects
+    def move(self, player, ai_enemy, ball):
         player.movePlayer()
         ai_enemy.moveAI_enemy()
-        ball.moveBall()
+        ball.moveBall(self.a)
 
     # Players collision
     @staticmethod
