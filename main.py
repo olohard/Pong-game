@@ -146,9 +146,6 @@ class Player2Game:
             # Scoring a point
             score_a_point(ball)
 
-            # Adding an new ball
-            add_a_new_ball(ball)
-
             # Updating screen and setting frames per second
             pygame.display.update()
             clock.tick(60)
@@ -226,8 +223,6 @@ class Player1Game:
             # Back to start button
             testing_button(dark_red, bright_red, 720, 650, 60, 60, start_screen)
 
-            # Adding an new ball
-            add_a_new_ball(ball)
 
             # Screen updating and setting frames per second
             pygame.display.update()
