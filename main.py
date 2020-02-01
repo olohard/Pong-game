@@ -1,9 +1,8 @@
-import pygame, time
+import pygame, time, random
 from player import Player
 from enemy import Enemy
 from ai_enemy import AI_enemy
 from ball import Ball
-import random
 
 
 # Game initialization
@@ -83,7 +82,7 @@ def winner():
                 screen.blit(text1, (310, 200))
 
                 # Button 'Back to menu'
-                button(480, 500, 'return.png', start_screen)     # TODO przesunąć przyciski
+                button(480, 500, 'BIGreturn.png', start_screen)     # TODO przesunąć przyciski
 
                 # Button 'Quit game'
                 button(700, 500, 'quit.png', quit_game)
@@ -102,7 +101,7 @@ def winner():
                 screen.blit(text2, (310, 200))
 
                 # Button 'Back to menu'
-                button(480, 500, 'return.png', start_screen)
+                button(480, 500, 'BIGreturn.png', start_screen)
 
                 # Button 'Quit game'
                 button(700, 500, 'quit.png', quit_game)
@@ -112,8 +111,8 @@ def winner():
 
 
     if Pvc:
-        text1 = font.render("Player Wins!")
-        text2 = font.render("Computer Wins!")
+        text1 = font.render("Player Wins!", True, white)
+        text2 = font.render("Computer Wins!", True, white)
 
 
         if player_score == 10:
@@ -128,7 +127,7 @@ def winner():
                 screen.blit(text1, (310, 200))
 
                 # Button 'Back to menu'
-                button(480, 500, 'return.png', start_screen)  # TODO przesunąć przyciski
+                button(480, 500, 'BIGreturn.png', start_screen)  # TODO przesunąć przyciski
 
                 # Button 'Quit game'
                 button(700, 500, 'quit.png', quit_game)
@@ -148,7 +147,7 @@ def winner():
                 screen.blit(text2, (310, 200))
 
                 # Button 'Back to menu'
-                button(480, 500, 'return.png', start_screen)
+                button(480, 500, 'BIGreturn.png', start_screen)
 
                 # Button 'Quit game'
                 button(700, 500, 'quit.png', quit_game)
