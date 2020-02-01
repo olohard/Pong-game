@@ -28,8 +28,7 @@ dark_blue = (0, 0, 200)
 pygame.display.set_caption("Let's PONG")
 
 # Icon of this game
-icon = pygame.image.load('ball.png')
-pygame.display.set_icon(icon)
+# pygame.display.set_icon()
 
 # Font initialization
 pygame.font.init()
@@ -216,7 +215,7 @@ def pause():
         button(710, 500, 'quit.png', quit_game)
 
         # Button 'Back to menu'
-        button(460, 500, 'return.png', start_screen)
+        button(460, 500, 'BIGreturn.png', start_screen)
 
         screen.blit(resume_text, (480, 320))
 
